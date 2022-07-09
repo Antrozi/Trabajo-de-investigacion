@@ -1,5 +1,8 @@
 # Trabajo-de-investigacion
 Repositorio para el paradigma funcional realizado en Racket
+
+
+
 #lang racket
 ;Se requiere ver la documentación de Racket en https://docs.racket-lang.org/csv-reading/index.html
 ;Se importa un paquete de racket para el manejo de archivos csv
