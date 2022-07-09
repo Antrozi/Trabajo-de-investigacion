@@ -14,6 +14,7 @@ Repositorio para el paradigma funcional realizado en Racket
 
 
 ;Se define lee una linea del archivo csv y se convierte en una lista de strings
+
 (define next-row  
   (make-csv-reader
    (open-input-file filename)
@@ -25,6 +26,7 @@ Repositorio para el paradigma funcional realizado en Racket
   (cdr l))
 
 ;se define una funcion para almacenar cada linea y almacenarla en una lista
+
 (define dataAlumnos (csv->list next-row))
 
 ;metodo para cambiar de tipo el 3er elemento de la lista
@@ -64,6 +66,7 @@ Repositorio para el paradigma funcional realizado en Racket
 (define PromedioCursos (promedioC "20218270")) ;El codigo del alumno es un string
   
 ;Problema B
+
 (define (Contar codigoCurso listaE contador puntero) 
   (if(empty? listaE)
      contador
@@ -79,6 +82,7 @@ Repositorio para el paradigma funcional realizado en Racket
 (define ContarAlumnos (ContarA "92276")) ;El codigo del curso es un string
 
 ;Problema C
+
 (define (verificar codigoAlumno codigoCurso nota listaE puntero listaELlena)
   (if(empty? listaE) 
      (insertarAlInicio (list codigoAlumno codigoCurso nota) listaELlena);se registro correctamente
