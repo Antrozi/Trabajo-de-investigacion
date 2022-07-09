@@ -8,6 +8,7 @@ Repositorio para el paradigma funcional realizado en Racket
 ;Se requiere ver la documentación de Racket en https://docs.racket-lang.org/csv-reading/index.html
 
 ;Se importa un paquete de racket para el manejo de archivos csv
+
 (require csv-reading)
 
 (define filename "notasAlumnos.csv");se define el archivo csv
@@ -30,15 +31,18 @@ Repositorio para el paradigma funcional realizado en Racket
 (define dataAlumnos (csv->list next-row))
 
 ;metodo para cambiar de tipo el 3er elemento de la lista
+
 (define (cambiar3eDeTipo l)
   (list-update  l 2 string->number ))
   
 
 ;Metodo insertar un elemento al inicio 
+
 (define(insertarAlInicio dato l )
      (list* dato l))
 
 ;Se convierte de lista a Lista Enlazada
+
 (define (listaToListaE  data lista_enlazada puntero)
   (if(empty? (siguiente data))
      (insertarAlInicio (cambiar3eDeTipo (car data)) lista_enlazada)
@@ -46,6 +50,7 @@ Repositorio para el paradigma funcional realizado en Racket
      ))
 
 ;Se almacena la data en la variable listaEnlazadaAlumnos
+
 (define listaEnlazadaAlumnos (list* (listaToListaE dataAlumnos  '() 0)))
 
 ;Problema A
