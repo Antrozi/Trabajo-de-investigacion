@@ -4,11 +4,14 @@ Repositorio para el paradigma funcional realizado en Racket
 
 
 #lang racket
+
 ;Se requiere ver la documentación de Racket en https://docs.racket-lang.org/csv-reading/index.html
+
 ;Se importa un paquete de racket para el manejo de archivos csv
 (require csv-reading)
 
 (define filename "notasAlumnos.csv");se define el archivo csv
+
 
 ;Se define lee una linea del archivo csv y se convierte en una lista de strings
 (define next-row  
